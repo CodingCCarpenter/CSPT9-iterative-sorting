@@ -29,8 +29,27 @@ def selection_sort(arr):
 def bubble_sort(arr):
     # Your code here
 
+    cur_index = 0
+    swapped = True
+
+    while swapped:
+        swapped = False
+        for i in range(len(arr) - 1):
+            if arr[i] > arr[i + 1]:
+                arr[i + 1], arr[i] = arr[i], arr[i + 1]
+                swapped = True
+        cur_index += 1
+
 
     return arr
+
+# test array
+test_array = [1,12,8,4,3,7,18,21,36,18,4,3]
+
+print(selection_sort(test_array))
+print(bubble_sort(test_array))
+
+
 
 '''
 STRETCH: implement the Counting Sort function below
