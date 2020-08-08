@@ -4,6 +4,7 @@ def selection_sort(arr):
     for i in range(0, len(arr) - 1):
         cur_index = i
         smallest_index = cur_index
+
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         # Your code here
@@ -13,6 +14,13 @@ def selection_sort(arr):
 
         # TO-DO: swap
         # Your code here
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
+
+        # increment current index
+        cur_index += 1
+
+        # set the smallest index to be the current index (next checked)
+        smallest_index = cur_index
 
     return arr
 
